@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web View Exemplo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Para ocupar toda a altura da tela */
+        }
+        #webview-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: none; /* Inicialmente oculto */
+        }
+        #webview {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .top-message {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .whatsapp-message {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #message {
+            color: #FFFFFF;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px; /* Espaço entre a mensagem e o botão */
+        }
+        #access-button {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            font-size: 18px;
+            padding: 15px 30px; /* Aumenta o padding para torná-lo mais redondo */
+            border: none;
+            cursor: pointer;
+            border-radius: 30px; /* Arredonda o botão */
+            animation: pulse 1s infinite; /* Animação de pulsação do botão */
+            transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+        }
+        #access-button:hover {
+            background-color: #FF3333; /* Cor de fundo ao passar o mouse */
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
